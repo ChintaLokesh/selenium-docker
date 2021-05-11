@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [suite]">
+  <test thread-count="5" name="test1(failed)">
+    <parameter name="patientName" value="John Smith"/>
+    <parameter name="Username" value="Admin"/>
+    <parameter name="pageName" value="Homepage"/>
+    <parameter name="Password" value="Admin123"/>
+    <classes>
+      <class name="com.tests.RegisterPatientTest">
+        <methods>
+          <include name="findPatientRecordTest" invocation-numbers="0"/>
+          <include name="loginToAppTest" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="configure"/>
+        </methods>
+      </class> <!-- com.tests.RegisterPatientTest -->
+    </classes>
+  </test> <!-- test1(failed) -->
+</suite> <!-- Failed suite [suite] -->

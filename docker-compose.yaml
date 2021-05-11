@@ -1,0 +1,23 @@
+version: "2"
+services:
+  hub:
+    image: selenium/hub:3.14
+    ports:
+      - "4444:4444"
+  chrome:
+    image:  selenium/node-chrome:3.14
+    depends_on:
+      - hub
+    environment:
+      - HUB_HOST=hub
+      
+  Execute:
+    image: chintalokesh/selenium-docker
+    depends_on:
+      - chrome
+    environment:
+      - HUB_HOST=hub
+    volumes:
+      - C:\Users\lokeech\Desktop\config.properties:/usr/Automation/config.properties
+      - C:\Users\lokeech\.m2:/root/.m2
+      - ./target1:/usr/Automation/target

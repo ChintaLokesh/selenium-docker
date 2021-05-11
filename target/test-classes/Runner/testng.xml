@@ -1,0 +1,11 @@
+<suite name="suite">
+<test name="test1">
+<classes>
+<parameter name="pageName" value="Homepage"/>
+<parameter name="Username" value="Admin"/>
+<parameter name="Password" value="Admin123"/>
+<parameter name="patientName" value="John Smith"/>
+<class name="com.tests.RegisterPatientTest"/>
+</classes>
+</test>
+</suite>
