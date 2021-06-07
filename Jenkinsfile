@@ -11,7 +11,7 @@ pipeline {
         stage('Build Image') {
             steps {
                 //sh
-                bat "docker build -t='chintalokesh/seleniumdocker' ."
+                bat "docker build -t='chintalokesh/seleniumdocker:1.0' ."
             }
         }
         stage('Push Image') {
